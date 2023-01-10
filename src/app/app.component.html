@@ -1,0 +1,70 @@
+<div class="container contact-container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <h1>Formulario de contacto con emailJS</h1>
+        <div class="col-md-auto">
+          <label><b>Nombre y apellidos</b></label
+          ><br />
+          <input class="form-control" type="text" formControlName="name" />
+        </div>
+        <div class="col-md-auto">
+          <label><b>Email</b></label
+          ><br />
+          <input
+            class="form-control"
+            type="email"
+            email
+            formControlName="email"
+          />
+        </div>
+        <div class="col-md-auto">
+          <label><b>Teléfono</b></label
+          ><br />
+          <input class="form-control" type="tel" formControlName="phone" />
+        </div>
+        <div class="col-md-auto">
+          <label><b>Mensage</b></label
+          ><br />
+          <textarea
+            class="form-control"
+            type="text"
+            formControlName="message"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="col-md-auto">
+          <button
+            class="login-button-container mt-16 mb-16"
+            type="submit"
+            [disabled]="!contactForm.valid"
+          >
+            Enviar
+          </button>
+        </div>
+        <b>
+          Esté formulario es una aplicación desarrollada con Angular 15, es una
+          herramienta sencilla y fácil de usar para enviar correos electrónicos.
+          Utiliza EmailJS para poder enviar emails desde el navegador.
+        </b>
+        <br /><br />
+        <b>
+          La funcionalidad principal de la aplicación es un formulario de
+          contacto que permite a los usuarios enviar un correo electrónico con
+          información específica. El formulario incluye campos para ingresar el
+          nombre, correo electrónico, teléfono y un mensaje
+        </b>
+        <br /><br />
+        <b>
+          Una vez que los usuarios han llenado el formulario y han hecho clic en
+          el botón de envío, los datos se envían a través de EmailJS al
+          destinatario especificado. El usuario recibirá una confirmación de que
+          el correo electrónico ha sido enviado con éxito a traves de una
+          notigicación de Sweetaler2.
+        </b>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</div>
